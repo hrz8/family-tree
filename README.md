@@ -54,6 +54,7 @@ deno install
 
 ## Usage
 
+### Using Deno
 ```bash
 # Default input
 deno run --allow-read main.ts
@@ -63,6 +64,18 @@ deno run --allow-read main.ts inputs/input.txt
 deno run --allow-read main.ts inputs/sample1.txt
 deno run --allow-read main.ts inputs/sample2.txt
 deno run --allow-read main.ts inputs/sample3.txt
+```
+
+### Using Docker
+```bash
+# Build image
+docker build -t lengaburu .
+
+# Run/Invoke the container
+docker run -v $(pwd)/inputs/input.txt:/app/input.txt lengaburu /app/input.txt
+docker run -v $(pwd)/inputs/sample1.txt:/app/input.txt lengaburu /app/input.txt
+docker run -v $(pwd)/inputs/sample2.txt:/app/input.txt lengaburu /app/input.txt
+docker run -v $(pwd)/inputs/sample3.txt:/app/input.txt lengaburu /app/input.txt
 ```
 
 ### Input
