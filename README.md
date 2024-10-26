@@ -10,7 +10,14 @@ This application is a family tree finder implemented in Deno. This purpose of th
 curl -fsSL https://deno.land/install.sh | sh
 ```
 
-2. Clone/Copy the source code The project is structured as follows:
+2. Setup
+```bash
+# Change directory to the project
+cd lengaburu
+deno install
+```
+
+3. Clone/Copy/Extract the source code The project is structured as follows:
 
 ```
 .
@@ -32,7 +39,7 @@ curl -fsSL https://deno.land/install.sh | sh
 └── relationship.ts
 ```
 
-3. Key Files
+4. Key Files
 
 - `commands.ts`: Defines supported commands and constants
 - `entities/family_mock.ts`: A predefined family tree based on the challenge's
