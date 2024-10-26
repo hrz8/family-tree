@@ -70,7 +70,7 @@ const RELATIONSHIP: Record<SupportedRelationship, RelationshipFinder> = {
   Siblings: new Siblings(),
 };
 
-if (import.meta.main) {
+async function main() {
   const decoder = new TextDecoder("utf-8");
   const ft = new FamilyTree(KingArthur);
 
@@ -110,4 +110,8 @@ if (import.meta.main) {
       console.log(res);
     }
   }
+}
+
+if (import.meta.main) {
+  await main();
 }
